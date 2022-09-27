@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>
 
 
 phox:Entity
@@ -13,12 +14,14 @@ phox:Entity
 
 
 phox:Picture 
+    owl:sameAs foaf:Image; 
     rdfs:subClassOf phox:Entity; 
     rdfs:comment "A picture"; 
     rdfs:label "Picture" .
     
 
 phox:Person
+    owl:sameAs foaf:Person; 
     rdfs:subClassOf phox:Entity; 
     rdfs:comment "A person"; 
     rdfs:label "Person" .
@@ -27,6 +30,7 @@ phox:Person
 
 phox:firstName
     a rdf:Property, owl:DatatypeProperty ;
+    owl:sameAs foaf:name;
     rdfs:comment "Indicates the first name associated with the Person"; 
     rdfs:label "firstName" ;
     rdfs:domain phox:Person ;
@@ -35,6 +39,7 @@ phox:firstName
 phox:lastName
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the last name associated with the Person"; 
+    owl:sameAs foaf:name;
     rdfs:label "lastName" ;
     rdfs:domain phox:Person ;
     rdfs:range rdfs:Literal .
@@ -56,6 +61,7 @@ phox:author
 phox:represent
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the entities represented by the Picture"; 
+    owl:sameAs foaf:depicts ;
     rdfs:label "represent" ;
     rdfs:domain phox:Picture ;
     rdfs:range phox:Entity .

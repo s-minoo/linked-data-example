@@ -1,0 +1,8 @@
+PREFIX phox: <http://phox-example.com/>
+
+SELECT ?photo ?name WHERE {
+  ?photo a phox:Picture;
+         phox:represent ?person.
+  ?person a phox:Person;
+          phox:firstName ?name.
+}

@@ -4,16 +4,24 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ex: <http://www.example.com/>
 
+<https://upload.wikimedia.org/wikipedia/commons/1/11/Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg>
+    a phox:Picture; 
+    phox:uri <https://upload.wikimedia.org/wikipedia/commons/1/11/Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg>; 
+    phox:represent ex:elizabeth . 
 
+ex:elizabeth 
+    a phox:Person; 
+    phox:firstName "Elizabeth"; 
+    phox:lastName "Angela". 
 
-ex:photo-one  
+<https://live.staticflickr.com/1344/5109569375_c16af1e758_b.jpg> 
     a phox:Picture; 
     phox:uri <https://live.staticflickr.com/1344/5109569375_c16af1e758_b.jpg> ;
     phox:author ex:GirlA ; 
     phox:represent ex:photo-one ;
-    phox:represent ex:girl-photo .
-
-ex:girl-photo  
+    phox:represent ex:girl-photo ;
+    phox:represent ex:GirlA .
+<https://live.staticflickr.com/1344/5109569375_c16af1e758_b.jpg> 
     a phox:Picture; 
     phox:uri <https://live.staticflickr.com/1344/5109569375_c16af1e758_b.jpg> ;
     phox:author ex:GirlA ; 
