@@ -1,0 +1,26 @@
+@prefix phox: <http://phox-example.com/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ex: <http://www.example.com/>
+
+
+
+ex:photo-one  
+    a phox:Picture; 
+    phox:uri <https://live.staticflickr.com/1344/5109569375_c16af1e758_b.jpg> ;
+    phox:author ex:GirlA ; 
+    phox:represent ex:photo-one ;
+    phox:represent ex:girl-photo .
+
+ex:girl-photo  
+    a phox:Picture; 
+    phox:uri <https://live.staticflickr.com/1344/5109569375_c16af1e758_b.jpg> ;
+    phox:author ex:GirlA ; 
+    phox:represent ex:GirlA .
+
+ex:GirlA 
+    a phox:Person; 
+    phox:firstName "Jane"; 
+    phox:lastName "Doe". 
+
+

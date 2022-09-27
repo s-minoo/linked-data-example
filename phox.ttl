@@ -1,0 +1,60 @@
+@prefix phox: <http://phox-example.com/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+phox:Entity
+    a rdfs:Class, owl:Class ;
+    rdfs:subClassOf owl:Thing; 
+    rdfs:comment "An entity in the context of Phox ontology" ;
+    rdfs:label "Phox Entity" .
+
+
+
+phox:Picture 
+    rdfs:subClassOf phox:Entity; 
+    rdfs:comment "A picture"; 
+    rdfs:label "Picture" .
+    
+
+phox:Person
+    rdfs:subClassOf phox:Entity; 
+    rdfs:comment "A person"; 
+    rdfs:label "Person" .
+    
+
+
+phox:firstName
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the first name associated with the Person"; 
+    rdfs:label "firstName" ;
+    rdfs:domain phox:Person ;
+    rdfs:range rdfs:Literal .
+
+phox:lastName
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the last name associated with the Person"; 
+    rdfs:label "lastName" ;
+    rdfs:domain phox:Person ;
+    rdfs:range rdfs:Literal .
+
+phox:uri
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the uri path of the picture"; 
+    rdfs:label "uri" ;
+    rdfs:domain phox:Picture ;
+    rdfs:range rdfs:IRI .
+
+phox:author
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the author associated with the Picture"; 
+    rdfs:label "author" ;
+    rdfs:domain phox:Picture ;
+    rdfs:range phox:Person .
+
+phox:represent
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the entities represented by the Picture"; 
+    rdfs:label "represent" ;
+    rdfs:domain phox:Picture ;
+    rdfs:range phox:Entity .
