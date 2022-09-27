@@ -1,0 +1,6 @@
+PREFIX phox: <http://phox-example.com/>
+
+SELECT * WHERE {
+  ?person a phox:Person.
+  ?person ?property ?value.
+}
